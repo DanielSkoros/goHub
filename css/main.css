@@ -1,9 +1,13 @@
 body, html {
-  padding: 125px 0 0 0;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+}
+
+body {
+  padding: 100vh 0 0 0;
 }
 
 a {
@@ -63,6 +67,34 @@ nav ul li {
   background-blend-mode: overlay;
   top: -125px;
 }
+.landing .landing__header {
+  z-index: 100;
+  position: absolute;
+  top: 500px;
+  width: 450px;
+  margin: 0 0 0 300px;
+  font-size: 42px;
+  font-weight: bold;
+}
+.landing .landing__header .sub__header {
+  font-size: 1.125rem;
+  word-wrap: normal;
+  font-weight: normal;
+  opacity: 0.8;
+}
+.landing .landing__header .landing__btn, .landing .landing__header .landing__btn--white {
+  font-size: 0.8rem;
+}
+.landing .landing__header .row {
+  margin-top: 45px;
+  display: flex;
+}
+.landing .landing__header .row .landing__btn--white {
+  margin-left: 30px;
+  background: transparent;
+  color: black;
+  opacity: 0.7;
+}
 .landing .blob {
   background-image: url("../img/blob.png");
   background-repeat: no-repeat;
@@ -83,6 +115,56 @@ nav ul li {
   height: 775px;
   z-index: 2;
   align-self: flex-end;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  margin-left: 300px;
+}
+.container .grid--2x2 {
+  margin: 20px 0;
+  width: 1350px;
+  height: 675px;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-column-gap: 200px;
+  grid-row-gap: 100px;
+}
+.container .grid--2x2 .box:not(:first-child) {
+  -webkit-box-shadow: -5px 16px 28px 5px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: -5px 16px 28px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: -5px 16px 28px 5px rgba(0, 0, 0, 0.21);
+  background: white;
+}
+.container .grid--2x2 .box:first-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: transparent;
+}
+.container .grid--2x2 .box {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+.container .grid--2x2 .box .box__header {
+  font-size: 2.8rem;
+  font-weight: normal;
+  margin: 5px 0 0 0;
+  opacity: 0.6;
+}
+.container .grid--2x2 .box .subheading {
+  font-size: 0.4em;
+  opacity: 0.45;
 }
 
 /*# sourceMappingURL=main.css.map */
