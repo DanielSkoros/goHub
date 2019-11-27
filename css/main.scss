@@ -1,9 +1,11 @@
+* {
+  overflow-x: hidden;
+}
 body, html {
   padding:0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +32,22 @@ a {
   -moz-box-shadow: 2px 2px 300px -61px rgba(0,0,0,1);
   box-shadow: 2px 2px 300px -61px rgba(0,0,0,1);
   cursor: pointer;
+}
+
+.landing__btn--white {
+  margin-left: 30px;
+  background: transparent;
+  color: black;
+  opacity: 0.7;
+}
+
+.landing__btn, .landing__btn--white {
+  font-size: 0.8rem;
+}
+
+.row {
+  margin-top: 45px;
+  display: flex;
 }
 
 nav {
@@ -61,6 +79,7 @@ nav {
 
 
 .landing {
+  overflow: hidden;
   width: 100vw;
   position: absolute;
   background-image: url('../img/towers.png');
@@ -81,20 +100,6 @@ nav {
           font-weight: normal;
           opacity: 0.8;
         }
-      .landing__btn, .landing__btn--white {
-        font-size: 0.8rem;
-      }
-      .row {
-        margin-top: 45px;
-        display: flex;
-        .landing__btn--white {
-          margin-left: 30px;
-          background: transparent;
-          color: black;
-          opacity: 0.7;
-        }
-      }
-
     }
 
     .blob {
@@ -120,15 +125,23 @@ nav {
     }
 }
 
+.box__header--left {
+  text-align: left;
+  width: 100%;
+}
+
 .container {
   position: relative;
   z-index: 5;
   margin-left: 300px;
+  width: calc(100vw - 300px);
+  overflow: hidden;
 
   .grid--2x2 {
+    overflow: hidden;
     margin: 20px 0;
     width: 1350px;
-    height: 675px;
+    height: 900px;
     background-color: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -160,6 +173,23 @@ nav {
       font-size: 40px;
       font-family: sans-serif;
 
+      .box__image {
+        background-image: url("../img/card1.png");
+        background-repeat: no-repeat;
+        width: 175px;
+        height: 130px;
+        align-self: start;
+        margin-left: 30px;
+      }
+
+      .box__image--income {
+        background-image: url("../img/card3.png");
+      }
+
+      .box__image--monitor {
+        background-image: url("../img/card2.png");
+      }
+
       .box__header {
         font-size: 2.8rem;
         font-weight: normal;
@@ -173,3 +203,130 @@ nav {
     }
   }
 }
+
+.info {
+  margin-top: 300px;
+  margin-bottom: 150px;
+  text-align: center;
+  width: calc(100vw - 600px);
+  .info__header {
+    opacity: 0.4;
+    font-size: 2.4rem;
+  }
+}
+
+.background {
+  margin-bottom: 150px;
+  position: relative;
+  background-image: url("../img/infoBackground.png");
+  background-color: hsla(0,0%,100%,0.75);
+  background-blend-mode: overlay;
+  background-position: 50% 50%;
+  width: 100vw;
+  height: 1300px;
+  overflow: hidden;
+    .grid--4x4 {
+      margin: 20px 0;
+      width: 1350px;
+      height: 1000px;
+      background-color: transparent;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-row: auto;
+      grid-column-gap: 100px;
+      grid-row-gap: 10px;
+      overflow: hidden;
+
+        .box--sm {
+          background-color: transparent;
+          padding: 20px;
+          border-radius: 10px;
+          color: black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 40px;
+          font-family: sans-serif;
+          overflow: hidden;
+
+          .heading--sm {
+              overflow: hidden;
+              margin: 0;
+              padding: 0;
+              text-align: center;
+              font-size: 1.2rem;
+            }
+            .text--sm {
+              overflow: hidden;
+              text-align: center;
+              font-size: 1rem;
+            }
+
+          @for $i from 1 through 12 {
+            $url: url("../img/box--sm--#{$i}.png");
+            .image--sm--#{$i} {
+              margin-bottom: 20px;
+              width: 80px;
+              height: 80px;
+              background-image: $url;
+            }
+          }
+        }
+    }
+}
+
+
+.block {
+  display: flex;
+  margin-bottom: 200px;
+  width: calc(100vw - 600px);
+  .about__image {
+      background-image: url("../img/drive.png");
+      width: 650px;
+      height: 500px;
+    }
+
+  .content {
+    width:600px;
+    p {
+      font-size: 0.9rem;
+    }
+    h5 {
+      font-size: 2.8rem;
+      opacity: 0.6;
+      margin: 0 auto 20px auto;
+    }
+    .subsection {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+        div {
+          width: 45%;
+        }
+    }
+    .heading--sm {
+      font-size: 1.2rem;
+      opacity: 0.4;
+    }
+  }
+}
+
+.move__image {
+  background-image: url("../img/car.png");
+  width: 650px;
+  height: 500px;
+}
+
+.pilot {
+  position: relative;
+  width: 100vw;
+  .pilot__img {
+    background-image: url("../img/sit.png.png");
+    width: 752px;
+    height: 617px;
+  }
+}
+
+
+
