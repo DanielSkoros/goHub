@@ -140,7 +140,6 @@ nav ul li {
   overflow: hidden;
   margin: 20px 0;
   width: 1350px;
-  height: 900px;
   background-color: transparent;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,6 +169,7 @@ nav ul li {
   justify-content: center;
   font-size: 40px;
   font-family: sans-serif;
+  margin-bottom: 50px;
 }
 .container .grid--2x2 .box .box__image {
   background-image: url("../img/card1.png");
@@ -197,7 +197,7 @@ nav ul li {
 }
 
 .info {
-  margin-top: 300px;
+  margin-top: 250px;
   margin-bottom: 150px;
   text-align: center;
   width: calc(100vw - 600px);
